@@ -76,11 +76,11 @@ jobs:
             - name: Download Artifacts
               uses: actions/download-artifact@v3
               with:
-                name: publish
+                name: build
             - name: Publish
               run: dotnet publish --no-restore --no-build ConnectFourWeb
             - name: Upload Artifacts
               uses: actions/upload-artifact@v3
               with:
-                name: build
+                name: publish
                 path: ConnectFourWeb/bin/Debug/net7.0/publish/**
